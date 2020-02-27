@@ -30,19 +30,21 @@ drive.mount('/content/gdrive')
 
 ## Step 2: Download the tutorial materials to your Google Drive
 
-Add another code cell to the notebook and run the following lines of code:
+Add another code cell to the notebook and run the following line of code:
 
 ```
 cd gdrive/'My Drive'
-!git clone https://github.com/MQ-ASTR3110-2020/ASTR3110_Tutorials.git
 ```
 
-This clones (downloads) the course materials from the GitHub online
-repository.
+Wait for this to execute successfully and then do the following in a
+new cell:
 
+```
+!git clone https://github.com/MQ-ASTR3110-2020/ASTR3110_Tutorial_Notebooks.git
+```
 
-**NOTE: steps 1 & 2 only need to be done once - when you start for the first
-time.**
+This clones (downloads) the tutorial materials from the GitHub online
+repository. 
 
 ## Step 3: Start a Jupiter Notebook and reconnect to your Google Drive.
 
@@ -51,21 +53,23 @@ Notebook. You can think of these as being similar to a spreadsheet
 with a single column of cells, each of which contains a block of
 code. You execute these blocks in sequence.
 
-Each topic within the tutorial is contained in a dedicated
-notebook. When starting a new Notebook session you will need to relink
-to your Google Drive:
+Each topic within the tutorial is contained in a dedicated notebook,
+which will be added to the repository as the session progresses. When
+starting a new Notebook session you will need to relink to your Google
+Drive (if you need to save data from the Notebook):
 
  * Go to the URL https://www.google.com/drive/.
  * Log in to your Google account (if not already logged in).
  * Check you are in the correct Google account (top right corner of browser).
  * Open the directory where you downloaded the course content.
- * Open a notebook, e.g. 03_classification.ipynb, with Colaboratory.
+ * Open a notebook, e.g. ```ASTR3110_Tutorial_1_Probabilities.ipynb```, with Colaboratory.
  * Add a code cell at the top of the notebook with the code:
+ 
 ```
 from google.colab import drive
 drive.mount('/content/gdrive')
 import os
-os.chdir('./gdrive/My Drive/Intro_ML_Workshop/')
+os.chdir('./gdrive/My Drive/ASTR3110_Tutorial_Notebooks')
 ```
  * Enter your authorization code from the provided link again.
 
